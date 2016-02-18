@@ -90,17 +90,19 @@ wget http://download.qt.io/development_releases/qt/5.6/5.6.0-beta/single/qt-ever
 cd qt-everywhere-opensource-src-5.6.0-beta && \
 dos2unix -k -o configure && \
 ./configure -confirm-license -opensource && \
-make && \
-make install && \
-cd qtwebengine && \
-qmake && \
-make && \
-make install
+make
+#&& \
+#make install && \
+#cd qtwebengine && \
+#qmake && \
+#make && \
+#make install
 
 # cleanup 
 RUN cd / && \
 apt-get purge --remove $BUILD_APTLIST $QT_BUILD_APTLIST -y && \
 apt-get autoremove -y && \
 apt-get clean -y && \
-rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/* 
+rm -rf /var/lib/apt/lists/* /var/tmp/*
+#/tmp/* 
 
