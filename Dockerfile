@@ -99,10 +99,9 @@ make
 #make install
 
 # cleanup 
-RUN cd / && \
-apt-get purge --remove $BUILD_APTLIST $QT_BUILD_APTLIST -y && \
-apt-get autoremove -y && \
-apt-get clean -y && \
-rm -rf /var/lib/apt/lists/* /var/tmp/*
-#/tmp/* 
+#RUN cd / && \
+#apt-get purge --remove $BUILD_APTLIST $QT_BUILD_APTLIST -y && \
+#apt-get autoremove -y && \
+#apt-get clean -y && \
+#rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/* 
 
