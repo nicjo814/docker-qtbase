@@ -87,7 +87,7 @@ wget http://download.qt.io/development_releases/qt/5.6/5.6.0-beta/single/qt-ever
 7z x qt-everywhere-opensource-src-5.6.0-beta.7z && \
 cd qt-everywhere-opensource-src-5.6.0-beta && \
 dos2unix -k -o configure && \
-./configure -confirm-license -opensource -prefix /usr/local/qt5 && \
+./configure -confirm-license -opensource -nomake examples -nomake tests -prefix /usr/local/qt5 && \
 make && \
 make install && \
 cd qtwebengine && \
