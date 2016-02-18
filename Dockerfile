@@ -4,7 +4,8 @@ FROM linuxserver/baseimage
 ENV APTLIST="p7zip-full \
 wget"
 
-ENV BUILD_APTLIST="dos2unix binutils bsdmainutils build-essential comerr-dev cpp cpp-4.8 dbus debhelper \
+ENV BUILD_APTLIST="libcap-dev dos2unix binutils bsdmainutils build-essential \
+libpci-dev libxss-dev comerr-dev cpp cpp-4.8 dbus debhelper \
 dh-apparmor docbook docbook-to-man dpkg-dev fontconfig fontconfig-config \
 fonts-dejavu-core freetds-common freetds-dev g++ g++-4.8 gcc gcc-4.8 gdb \
 gettext gettext-base gir1.2-atk-1.0 gir1.2-atspi-2.0 gir1.2-freedesktop \
@@ -90,18 +91,17 @@ wget http://download.qt.io/development_releases/qt/5.6/5.6.0-beta/single/qt-ever
 cd qt-everywhere-opensource-src-5.6.0-beta && \
 dos2unix -k -o configure && \
 ./configure -confirm-license -opensource -prefix /usr/local && \
-make
-#&& \
-#make install && \
-#cd qtwebengine && \
-#qmake && \
-#make && \
-#make install
+make && \
+make install && \
+cd qtwebengine && \
+qmake && \
+make && \
+make install
 
 # cleanup 
-#RUN cd / && \
-#apt-get purge --remove $BUILD_APTLIST $QT_BUILD_APTLIST -y && \
-#apt-get autoremove -y && \
-#apt-get clean -y && \
-#rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/* 
+RUN cd / && \
+apt-get purge --remove $BUILD_APTLIST $APTLIST -y && \
+apt-get autoremove -y && \
+apt-get clean -y && \
+rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/* 
 
