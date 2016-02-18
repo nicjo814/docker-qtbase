@@ -75,11 +75,6 @@ x11proto-kb-dev x11proto-randr-dev x11proto-record-dev x11proto-render-dev \
 x11proto-xext-dev x11proto-xf86vidmode-dev x11proto-xinerama-dev xauth \
 xorg-sgml-doctools xserver-common xtrans-dev xvfb zlib1g-dev"
 
-# add repositories
-# RUN \
-# plex home theater
-# add-apt-repository ppa:plexapp/plexht
-
 # install packages
 RUN apt-get update -q && \
 apt-get install \
@@ -106,4 +101,3 @@ apt-get purge --remove $BUILD_APTLIST $APTLIST -y && \
 apt-get autoremove -y && \
 apt-get clean -y && \
 rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/* 
-
