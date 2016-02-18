@@ -5,7 +5,7 @@ ENV APTLIST="p7zip-full \
 wget"
 
 ENV BUILD_APTLIST="libcap-dev dos2unix binutils bsdmainutils build-essential \
-git gperf libpci-dev libxss-dev comerr-dev cpp cpp-4.8 dbus debhelper \
+bison git gperf libpci-dev libxss-dev comerr-dev cpp cpp-4.8 dbus debhelper \
 dh-apparmor docbook docbook-to-man dpkg-dev fontconfig fontconfig-config \
 fonts-dejavu-core freetds-common freetds-dev g++ g++-4.8 gcc gcc-4.8 gdb \
 gettext gettext-base gir1.2-atk-1.0 gir1.2-atspi-2.0 gir1.2-freedesktop \
