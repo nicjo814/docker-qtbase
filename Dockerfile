@@ -3,16 +3,16 @@ FROM linuxserver/baseimage
 ENV PATH="$PATH:/usr/local/qt5/bin"
 
 # specify apt packages to install
-ENV APTLIST="p7zip-full wget libicu52 libx11-6 libfontconfig1 libfreetype6 \
-libjpeg-turbo8 libxi6 libxcursor1 libxext6 libxfixes3 libxrender1 libxss1 \
-libxcomposite1 libxdamage1 libxtst6 libxrandr2 libgtk2.0-0 libpango-1.0-0 \
-libxkbcommon0 libcups2 libx11-xcb1 libxcb-render-util0 libsm6 libice6 \
-libxcb-render0 libxcb1 libxcb-image0 libxcb-icccm4 libxcb-sync1 libxcb-xfixes0 \
-libxcb-shm0 libxcb-randr0 libxcb-shape0 libxcb-keysyms1 libxcb-xkb1 \
-libxkbcommon-x11-0 libwayland-client0 libwayland-cursor0 libxcb-glx0 \
-libgstreamer0.10-0 libgstreamer-plugins-base0.10-0 libpq5 libsybdb5 libodbc1 \
-libmysqlclient18 libgl1-mesa-glx libpulse0 libasound2 libegl1-mesa \
-libwayland-egl1-mesa libgbm1"
+ENV APTLIST="p7zip-full wget libicu52 libfreetype6 libegl1-mesa \
+libgl1-mesa-glx libice6 libsm6 libx11-6 libxcomposite1 libxcursor1 \
+libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 \
+libxss1 libxtst6 libasound2 libfontconfig1 libgstreamer-plugins-base0.10-0 \
+libpulse0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 \
+libxcb-render-util0 libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1 \
+libxcb-xfixes0 libxcb-xkb1 libxcb1 libxkbcommon-x11-0 libjpeg-turbo8 \
+libgtk2.0-0 libpango-1.0-0 libxkbcommon0 libcups2 libx11-xcb1 \
+libwayland-client0 libwayland-cursor0 libxcb-glx0 libgstreamer0.10-0 \
+libpq5 libsybdb5 libodbc1 libmysqlclient18 libwayland-egl1-mesa libgbm1"
 
 ENV BUILD_APTLIST="libcap-dev dos2unix binutils bsdmainutils build-essential \
 bison git gperf libpci-dev libxss-dev comerr-dev cpp cpp-4.8 dbus debhelper \
@@ -106,6 +106,6 @@ make install && \
 # cleanup 
 cd / && \
 apt-get purge --remove $BUILD_APTLIST -y && \
-apt-get autoremove -y && \
+#apt-get autoremove -y && \
 apt-get clean -y && \
 rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/* 
