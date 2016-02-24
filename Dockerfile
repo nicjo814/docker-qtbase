@@ -106,6 +106,7 @@ make install && \
 # cleanup 
 cd / && \
 apt-get purge --remove $BUILD_APTLIST -y && \
-#apt-get autoremove -y && \
+apt-get autoremove -y && \
+apt-get install $APTLIST -qy && \
 apt-get clean -y && \
 rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/* 
