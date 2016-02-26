@@ -12,7 +12,8 @@ libxcb-render-util0 libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1 \
 libxcb-xfixes0 libxcb-xkb1 libxcb1 libxkbcommon-x11-0 libjpeg-turbo8 \
 libgtk2.0-0 libpango-1.0-0 libxkbcommon0 libcups2 libx11-xcb1 \
 libwayland-client0 libwayland-cursor0 libxcb-glx0 libgstreamer0.10-0 \
-libpq5 libsybdb5 libodbc1 libmysqlclient18 libwayland-egl1-mesa libgbm1"
+libpq5 libsybdb5 libodbc1 libmysqlclient18 libwayland-egl1-mesa libgbm1 \
+libxfcegui4-4"
 
 ENV BUILD_APTLIST="libcap-dev dos2unix binutils bsdmainutils build-essential \
 bison git gperf libpci-dev libxss-dev comerr-dev cpp cpp-4.8 dbus debhelper \
@@ -21,7 +22,7 @@ fonts-dejavu-core freetds-common freetds-dev g++ g++-4.8 gcc gcc-4.8 gdb \
 gettext gettext-base gir1.2-atk-1.0 gir1.2-atspi-2.0 gir1.2-freedesktop \
 gir1.2-gdkpixbuf-2.0 gir1.2-gst-plugins-base-0.10 gir1.2-gstreamer-0.10 \
 gir1.2-gtk-2.0 gir1.2-pango-1.0 groff-base icu-devtools intltool-debian \
-krb5-multidev libapparmor1 libasan0 libasound2-data \
+krb5-multidev libapparmor1 libasan0 libasound2-data libxfcegui4-dev \
 libasound2-dev libasprintf0c2 libasyncns0 libatk1.0-0 libatk1.0-data \
 libatk1.0-dev libatomic1 libatspi2.0-0 libatspi2.0-dev libavahi-client-dev \
 libavahi-client3 libavahi-common-data libavahi-common-dev libavahi-common3 \
