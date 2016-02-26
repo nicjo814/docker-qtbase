@@ -91,9 +91,9 @@ $APTLIST $BUILD_APTLIST -qy && \
 # build qt
 mkdir -p /tmp && \
 cd /tmp && \
-wget http://download.qt.io/development_releases/qt/5.6/5.6.0-beta/single/qt-everywhere-opensource-src-5.6.0-beta.7z && \
-7z x qt-everywhere-opensource-src-5.6.0-beta.7z && \
-cd qt-everywhere-opensource-src-5.6.0-beta && \
+wget http://download.qt.io/development_releases/qt/5.6/5.6.0-rc/single/qt-everywhere-opensource-src-5.6.0-rc.7z && \
+7z x qt-everywhere-opensource-src-5.6.0-rc.7z && \
+cd qt-everywhere-opensource-src-5.6.0-rc && \
 dos2unix -k -o configure && \
 ./configure -confirm-license -opensource -nomake examples -nomake tests -prefix /usr/local/qt5 && \
 make && \
