@@ -7,7 +7,7 @@ ENV APTLIST="qt56-meta-full"
 ENV BUILD_APTLIST=""
 
 # install packages
-RUN add-apt-repository -y ppa:beineri/opt-qt56-alpha-trusty && \
+RUN add-apt-repository -y ppa:beineri/opt-qt56-beta-trusty && \
 apt-get update -q && \
 apt-get install \
 $APTLIST $BUILD_APTLIST -qy && \
